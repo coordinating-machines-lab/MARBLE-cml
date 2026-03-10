@@ -58,7 +58,6 @@
 ### Install from scratch
 
 Use a virtual environment, e.g. with anaconda3:
-
 ```bash
 conda create -n marble python=3.10
 conda activate marble
@@ -66,22 +65,29 @@ curl -sSL https://install.python-poetry.org | python3
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
+> **Note for Mac (Apple Silicon / ARM) users:** `psycopg2-binary` may fail during `poetry install` due to a known PEP 517 build issue where it tries to compile from source instead of using a pre-built wheel. Fix it by pre-installing the binary directly before running `poetry install`:
+> ```bash
+> pip install psycopg2-binary --only-binary :all:
+> poetry install
+> ```
+> No PostgreSQL installation required.
+
 ### Configure environment variables
-Environment variables such as `OPENAI_API_KEY` and `Together_API_KEY` related configs are required to run the code. The recommended way to set all the required variable is
-1. Copy the `.env.template` file into the project root with the name `.env`.
+
+1. Copy the example config and fill in your API key:
 ```bash
-cp .env.template .env
+cp marble/configs/test_config/werewolf_config/werewolf_config.yaml.example \
+   marble/configs/test_config/werewolf_config/werewolf_config.yaml
 ```
-2. Fill the required environment variables in the `.env` file.
+2. Edit `werewolf_config.yaml` and replace `your_openai_api_key_here` with your real OpenAI key.
+
+The real config file is gitignored so your key will never be accidentally committed.
 
 ### Running the examples
-To run examples provided in the `examples`:
-
 ```bash
 poetry install
-cd scripts
-cd werewolf
-bash run_simulation.sh
+# Run from repo root
+bash scripts/werewolf/run_simulation.sh
 ```
 
 #### New branch for each feature
