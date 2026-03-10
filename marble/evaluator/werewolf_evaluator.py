@@ -551,7 +551,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--config_path",
         type=str,
-        default=r"marble\configs\test_config\werewolf_config.yaml",
+        default="marble/configs/test_config/werewolf_config.yaml",
         help="Path to the configuration file",
     )
     parser.add_argument(

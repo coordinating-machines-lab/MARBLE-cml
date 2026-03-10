@@ -380,8 +380,8 @@ class WerewolfAgent:
 
         # Step 2: Define YAML template path
         yaml_paths = {
-            "werewolf_action": r"marble\agent\werewolf_prompts\werewolf_action.yaml",
-            "werewolf_discussion": r"marble\agent\werewolf_prompts\werewolf_discussion.yaml",
+            "werewolf_action": "marble/agent/werewolf_prompts/werewolf_action.yaml",
+            "werewolf_discussion": "marble/agent/werewolf_prompts/werewolf_discussion.yaml",
         }
         yaml_path = yaml_paths.get(event_type, None)
         if not yaml_path:
@@ -503,17 +503,17 @@ class WerewolfAgent:
 
         # Step 2: Define YAML path based on the action type
         yaml_paths = {
-            "witch_action": r"marble\agent\werewolf_prompts\witch_prompt.yaml",
-            "guard_action": r"marble\agent\werewolf_prompts\guard_prompt.yaml",
-            "run_for_sheriff": r"marble\agent\werewolf_prompts\run_for_sheriff.yaml",
-            "sheriff_speech": r"marble\agent\werewolf_prompts\sheriff_speech.yaml",
-            "vote_for_sheriff": r"marble\agent\werewolf_prompts\vote_for_sheriff.yaml",
-            "decide_speech_sequence": r"marble\agent\werewolf_prompts\decide_speech_sequence.yaml",
-            "seer_action": r"marble\agent\werewolf_prompts\seer_prompt.yaml",
-            "player_speech": r"marble\agent\werewolf_prompts\speech_prompt.yaml",
-            "vote_action": r"marble\agent\werewolf_prompts\vote_prompt.yaml",
-            "last_words": r"marble\agent\werewolf_prompts\last_word_prompt.yaml",
-            "badge_flow": r"marble\agent\werewolf_prompts\badge_flow.yaml",
+            "witch_action": "marble/agent/werewolf_prompts/witch_prompt.yaml",
+            "guard_action": "marble/agent/werewolf_prompts/guard_prompt.yaml",
+            "run_for_sheriff": "marble/agent/werewolf_prompts/run_for_sheriff.yaml",
+            "sheriff_speech": "marble/agent/werewolf_prompts/sheriff_speech.yaml",
+            "vote_for_sheriff": "marble/agent/werewolf_prompts/vote_for_sheriff.yaml",
+            "decide_speech_sequence": "marble/agent/werewolf_prompts/decide_speech_sequence.yaml",
+            "seer_action": "marble/agent/werewolf_prompts/seer_prompt.yaml",
+            "player_speech": "marble/agent/werewolf_prompts/speech_prompt.yaml",
+            "vote_action": "marble/agent/werewolf_prompts/vote_prompt.yaml",
+            "last_words": "marble/agent/werewolf_prompts/last_word_prompt.yaml",
+            "badge_flow": "marble/agent/werewolf_prompts/badge_flow.yaml",
         }
         yaml_path = yaml_paths.get(event_type, None)
 

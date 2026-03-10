@@ -209,3 +209,4 @@ marble/workspace
 marble/logs
 marble/results
 backup/
+marble/configs/test_config/werewolf_config/werewolf_config.yaml
